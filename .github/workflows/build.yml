@@ -33,8 +33,7 @@ jobs:
       - name: Instalar herramientas Android
   run: |
     yes | buildozer android update || true
-    yes | sdkmanager "build-tools;35.0.0" "platform-tools" "platforms;android-35" "aidl;1"
-
+    yes | sdkmanager "build-tools;35.0.0" "platform-tools" "platforms;android-35" "aidl;1" 
 - name: Compilar APK
   run: buildozer android debug
 
@@ -43,5 +42,3 @@ jobs:
         with:
           name: Alisa-APK
           path: bin/*.apk
-
-          
